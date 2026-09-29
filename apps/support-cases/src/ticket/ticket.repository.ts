@@ -26,4 +26,11 @@ export class TicketRepository {
       data,
     });
   }
+  async findLearnerByUserId(userId: number){
+    return this.model.learnerLifecycle.findFirst({
+      where: {
+        userId: userId,
+      },
+    });
+  }
 }

@@ -48,6 +48,11 @@ export const accessRules: AccessRule[] = [
         path: /^\/api\/v1\/tickets\/[^/]+$/, 
         roles: ['PSA'],
     },
+    {
+        method: 'PATCH',
+        path: /^\/api\/v1\/tickets\/[^/]+\/accept$/,
+        roles: ['LEARNER'],
+    },
 ];
 
 export function findAccessRule(
