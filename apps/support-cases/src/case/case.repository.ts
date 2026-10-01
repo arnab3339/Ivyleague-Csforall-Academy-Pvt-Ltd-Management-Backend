@@ -12,15 +12,9 @@ export class CaseRepository {
         private readonly prisma: ModelService,
     ) {}
 
-    async findLearnerById(learnerId: number) {
-        return this.prisma.learnerLifecycle.findUnique({
-            where: {
-                id: learnerId,
-            },
-        });
-    }
-
-    async create(data: Prisma.EscalationCaseUncheckedCreateInput,): Promise<EscalationCase> {
+    async create(
+        data: Prisma.EscalationCaseUncheckedCreateInput,
+    ): Promise<EscalationCase> {
         return this.prisma.escalationCase.create({
             data,
         });
