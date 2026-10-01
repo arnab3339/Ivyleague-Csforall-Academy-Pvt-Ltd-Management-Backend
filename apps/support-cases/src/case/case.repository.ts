@@ -20,9 +20,7 @@ export class CaseRepository {
         });
     }
 
-    async create(
-        data: Prisma.EscalationCaseUncheckedCreateInput,
-    ): Promise<EscalationCase> {
+    async create(data: Prisma.EscalationCaseUncheckedCreateInput,): Promise<EscalationCase> {
         return this.prisma.escalationCase.create({
             data,
         });

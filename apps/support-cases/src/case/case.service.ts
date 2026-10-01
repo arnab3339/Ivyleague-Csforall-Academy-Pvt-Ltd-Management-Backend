@@ -12,9 +12,7 @@ export class CaseService {
         private readonly caseRepository: CaseRepository,
     ) {}
 
-    async createCase(
-        payload: CreateCaseDto,
-    ) {
+    async createCase(payload: CreateCaseDto) {
         const learner =
             await this.caseRepository.findLearnerById(
                 payload.learnerId,
