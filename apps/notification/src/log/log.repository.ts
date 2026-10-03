@@ -14,9 +14,7 @@ export class LogRepository {
         private readonly prisma: ModelService,
     ) {}
 
-    findAll(
-        query: GetNotificationLogsDto,
-    ): Promise<NotificationLog[]> {
+    findAll(query: GetNotificationLogsDto,): Promise<NotificationLog[]> {
         const where: Prisma.NotificationLogWhereInput = {};
 
         if (query.recipientUserId !== undefined) {
